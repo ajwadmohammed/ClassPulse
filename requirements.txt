@@ -1,0 +1,22 @@
+streamlit # for frontend  
+numpy
+pandas
+
+scikit-learn  # face recognition frm images, it has svm which is being used for classification
+dlib-bin # face recognition frm images, it upon seeing character say that this shape is face, it has a pre-trained model for face detection.
+         # speciality of bin here is it is nothing but the prely converted into the python using various internal tools.
+         # python -m pip install dlib-20.0.0-cp310-cp310-win_amd64.whl to install the wheel that is specifically for the version 3.10 of my python
+         # we not only need to recognise the face but also to detect the face, so we need to have embedding to know how face look like.
+
+git+https://github.com/ageitgey/face_recognition_models  # embeddigs of the face, which is largely pretrained weights for face recognition.
+setuptools<70.0.0 # it mentions that the version of setuptools should be less than 70.0.0, because the latest version of setuptools is not compatible with dlib, so we need to install the lower version of setuptools.
+
+supabase  # db
+bcrypt  # for hashing the password for protection(for safety from leaks).
+
+segno  # for qr code generation
+pillow  # for image preprocessing (Used for open, create, manipulate and saving images)  
+
+librosa  # edit load modify voice files.
+resemblyzer # deals with embedding of voice
+
