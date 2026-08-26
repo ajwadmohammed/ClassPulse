@@ -38,7 +38,7 @@ def teacher_dashboard(): # after login what should be dislayed
         st.subheader(f"""Welcome, {teacher_data['name']} """)
         if st.button("Logout", type='secondary', key='loginbackbtn', shortcut="control+backspace"):
             st.session_state['is_logged_in'] = False
-            st.session_state.teacher_data
+            st.session_state.pop('teacher_data', None)
             st.rerun()
 
     st.space()

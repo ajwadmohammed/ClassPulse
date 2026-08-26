@@ -21,7 +21,7 @@ def student_dashboard():
         st.subheader(f"""Welcome, {student_data['name']} """)
         if st.button("Logout", type='secondary', key='loginbackbtn', shortcut="control+backspace"):
             st.session_state['is_logged_in'] = False
-            st.session_state.teacher_data
+            del st.session_state.student_data
             st.rerun()
 
     st.space()
@@ -50,7 +50,7 @@ def student_dashboard():
 
         stats_map[sid]['total'] += 1
 
-        if logs.get('is_present'):
+        if log.get('is_present'):
             stats_map[sid]['attended'] += 1
 
     cols = st.columns(2)
@@ -71,8 +71,8 @@ def student_dashboard():
                 code = sub['subject_code'],
                 section = sub['section'],
                 stats = [
-                    {'📅', 'Total', stats['total']},
-                    {'✅', 'Attended', stats['attended']},
+                    ('📅', 'Total', stats['total']),
+                    ('✅', 'Attended', stats['attended']),
                 ],
                 footer_callback = unenroll_button
 
