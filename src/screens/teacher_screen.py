@@ -313,7 +313,7 @@ def teacher_screen_login():
             else:
                 st.error("Invalid username and password combo")
     with btnc2:
-        if st.button('Register Instead', type="primary", icon=':material/passkey:', shortcut='control+enter', width='stretch'):
+        if st.button('Register Instead', type="primary", icon=':material/passkey:',  width='stretch'):
             st.session_state.teacher_login_type = 'register'
             # st.rerun()
 
@@ -358,7 +358,7 @@ def teacher_screen_register():
                 st.error(message)
 
     with btnc2:
-        if st.button('Login Instead', type="primary", icon=':material/passkey:', shortcut='control+enter', width='stretch'):
+        if st.button('Login Instead', type="primary", icon=':material/passkey:', width='stretch'):
             st.session_state.teacher_login_type='login'
 
     footer_dashboard()
